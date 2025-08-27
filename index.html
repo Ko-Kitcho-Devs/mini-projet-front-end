@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body class="text-[inter]">
+    <div class="justify-center w-[90%] m-[auto]">
+    <nav class=" w-full bg-white text-black py-4 flex">
+    <!-- Logo -->
+    <div class="text-2xl font-bold ">Prosperix</div>
+
+    <!-- Liens -->
+    <ul class="flex ml-[30%] space-x-8 font-bold">
+      <li><a href="#" class="hover:text-gray-300">Home</a></li>
+      <li><a href="#" class="hover:text-gray-300">Services</a></li>
+      <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+      <li><a href="#" class="hover:text-gray-300">Help</a></li>
+    </ul>
+
+    <div class="flex bg-transparent ml-[20%] font-bold  mr-[0px]">
+        <button class="text-[#008080]">Sign In</button>
+
+        <button class=" ml-7 bg-[#008080] p-3 text-white font-bold">Get Started</button>
+    </div>
+  </nav>
+  <section class="md:flex">
+
+    <div class="md:w-[50%]">
+        <p class="text-6xl font-bold  text-[#575757] pr-28"> Navigating the <span class="text-[#008080] font-bold font-[inter]  "> Global</span> financial landscape</p>
+        <p class="text-xl text-[#575757] mt-20 pr-28">Empowering Your Journey to Global Financial Success Through Customized and Personalized Financial
+             Consulting for Every Client</p>
+
+        <div class="flex mt-14">
+            <div><i class="fa-solid fa-envelope "></i>
+            <input type="email" placeholder="Entrez votre email" class="p-2"></div>
+            <button class=" bg-[#008080] p-2 text-white font-bold">Get Started</button>
+        </div>
+    </div>
+
+    <div class=" md:w-[50%]">
+      <div>
+        <div class="bg-white rounded-2xl space-y-6 md:w-[500px]">
+           <!-- cercle en pointillé -->
+            <div class=" absolute w-[580px] h-[550px] rounded-full border-2 border-grey border-dashed flex items-center justify-center">
+                
+              <div class="bg-red ">
+                  <div class="absolute left-[3%] top-[16%] w-16 h-16 flex items-center justify-center rounded-full bg-[#FF8181] text-white text-2xl">
+                  <i class="fa-solid fa-vector-square"></i>
+                </div>
+              </div>
+                
+
+                  <div class=" w-[70%] h-[70%] rounded-full border-2 border-grey border-dashed ">
+                      <div class=" relative -left-[3%] top-[30%] w-10 h-10 flex items-center justify-center rounded-full bg-[#46D9D1] text-white text-2xl">
+                        <i class="fa-solid fa-chart-pie"></i>
+                      </div>
+                  </div>
+
+                <div class="absolute bottom-[30%] -right-[20px] w-16 h-16 flex items-center justify-center rounded-full bg-[#81FE9C] text-white text-2xl ">
+                  <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+
+            </div>
+            <!-- Bar chart (Investments) -->
+            <div class="bg-white rounded-tl-[40px] rounded-br-[40px] shadow-2xl relative -right-[40%] z-20 ">
+            <h2 class="text-[#008080] font-semibold mb-4 ml-7">Investments</h2>
+            <canvas id="barChart" height="150"  ></canvas>
+            </div>
+
+            <!-- Line chart -->
+            <div class="bg-white rounded-tl-[40px] rounded-br-[40px] p-2  shadow-2xl relative -top-[23px] -right-[5%] z-10 " >
+            <canvas id="lineChart" height="150"></canvas>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="company logo" >
+      <div class="grid grid-cols-6 text-4xl w-5xl  my-[70px] ">
+
+           <img class="w-[130px] h-[50px] object-contain" src="img/Frame 9.png" alt="">  
+           <img class="w-[130px] h-[70px] object-contain" src="img/Frame 8.png" alt=""> 
+           <img class="w-[130px] h-[50px] object-contain" src="img/Frame 7.png" alt="">  
+           <img class="w-[130px] h-[70px] object-contain" src="img/Frame 6.png" alt=""> 
+           <img class="w-[130px] h-[50px] object-contain" src="img/Frame 5.png" alt=""> 
+           <img class="w-[130px] h-[50px] object-contain" src="img/Frame 4.png" alt=""> 
+      </div>
+  </section>
+
+  <section id="expertise">
+    <div class="grid grid-cols-2">
+      <div class="h-[550px]">
+        <div class="flex items-center justify-center w-[200px]">
+              <div class="text-[#008080] bg-[#E0F8F8] relative left-0 right-4 px-2">OUR EXPERTISES</div>
+              <div class="bg-[#008080] w-[50px] h-[2px] ml-[20px]"></div>
+        </div>
+        <p class="text-[48px] font-bold pr-16">
+              Transforming Finances With Strategic Wealth Management
+        </p>
+        <div>
+          <p  class="mt-8 pr-28">
+                  Guiding You on Your Global Financial Success Journey Through Customized & Personalized
+                Financial Consulting Services. Achieve Your Goals with Data-Driven Expertise and Secure Your
+                Financial Future, Successfully Navigating the Ever-Changing Finance.
+        </p>
+        <p class="mt-8 pr-28">
+                  We're Committed to Providing
+                You with Expert Guidance, Proven Strategies & Personalized Approach to Ensure Financial Prosperity
+        </p>
+        </div>
+
+        <div class="mt-16">
+            <a class="p-3 mt-24 text-black border border-[#D5DDDD] " href="#"> Explore Services</a>
+        </div>
+
+      </div>
+
+      <div class=" bg-[#E0F8F8] rounded-tl-[40px] rounded-br-[40px] h-[550px]">
+          <img class=" object-contain h-[550px]" src="img/Imagediss.png" alt="">
+      </div>
+    </div>
+
+  </section>
+
+  <section id="services">
+    <div class="grid grid-cols-2 mt-20">
+      <div class="h-[550px] bg-[#E0F8F8] rounded-tl-[40px] rounded-br-[40px] mr-24">
+          <img class=" object-contain h-[550px]" src="img/Imagegraph.png" alt="">
+      </div>
+
+      <div class=" h-[550px]">
+          <div class="flex items-center justify-center w-[200px]">
+              <div class="text-[#008080] bg-[#E0F8F8] relative left-0 right-4 px-2">OUR SERVICES</div>
+              <div class="bg-[#008080] w-[50px] h-[2px] ml-[20px]"></div>
+          </div>
+          <p class="text-[48px] font-bold">Our Services Can Help You Grow Your Investments and Wealth</p>
+          <p class="mt-10">Embark on a Journey to Unlock a World of Financial Opportunities, Grow Your Investment
+             with Our Comprehensive and Expert Services</p>
+          <div class="grid grid-cols-2 mt-8">
+            <div><i class="fa-solid fa-dollar-sign mr-4 p-2 rounded-full bg-[#81FE9C]"></i> Financial Planning</div>
+            <div><i class="fa-solid fa-chart-pie mr-4 p-2 rounded-full bg-[#FFABAB]"></i> investment Avisory</div>
+            <div class="mt-5"> <i class="fa-solid fa-house-chimney mr-4 p-2 rounded-full bg-[#46D9D1]"></i> Estate planning</div>
+            <div class="mt-5"> <i class="fa-solid fa-house-chimney-crack mr-4 p-2 rounded-full bg-[#FFEE90]"></i> wealth managment</div>
+          </div>
+          <div class="mt-16">
+            <a class="p-3 mt-24 text-black border border-[#D5DDDD] " href="#"> Explore Services</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="témoignages ">
+    <div class="flex items-center justify-center w-[200px] mt-16">
+              <div class="text-[#008080] bg-[#E0F8F8] relative left-0 right-4 px-2">TESTIMONIALS</div>
+              <div class="bg-[#008080] w-[50px] h-[2px] ml-[20px]"></div>
+    </div>
+    <p class="text-[48px] font-bold"> What Our Customers Say</p>
+    <p class="mt-8 pr-[57%]">Discover the Success Stories and Satisfaction of Clients Who Have Benefited from Our Expertise
+       and Personalized Financial Guidance</p>
+
+    <div class="mt-8 flex justify-between">
+      <div class="w-[30%] h-[350px] border-[3px] border-[#D5DDDD] rounded-tl-[40px] rounded-br-[40px]">
+                <div class="flex ml-16 mt-8">
+                    <img class="w-[75px] h-[75px]" src="img/Mask group.png" alt="">
+                    <div class="ml-5 mt-3">
+                      <p class="font-bold">Grâce Turner</p>
+                      <p> Director</p>
+                    </div>
+                </div>
+                <p class="mx-16 mt-8">
+                      Financial expertise has made a significant impact on our nonprofit financial
+                      stability, allowing us to better serve our community
+                </p>
+                <p class="text-[#008080] text-right text-[100px] mr-16">“</p>
+      </div>
+
+      <div class="w-[30%] h-[350px] bg-[#008080] text-[#D5DDDD] border-[3px] border-[#D5DDDD] rounded-tl-[40px] rounded-br-[40px]">
+                <div class="flex ml-16 mt-8">
+                    <img class="w-[75px] h-[75px]" src="img/Mask group1.png" alt="">
+                    <div class="ml-5 mt-3">
+                      <p class="font-bold">Linda Karter</p>
+                      <p> Analyste</p>
+                    </div>
+                </div>
+                <p class="mx-16 mt-8">
+                      Financial expertise has made a significant impact on our nonprofit financial
+                      stability, allowing us to better serve our community
+                </p>
+                <p class=" text-right text-[100px] mr-16">“</p>
+      </div>
+
+      <div class="w-[30%] h-[350px] border-[3px] border-[#D5DDDD] rounded-tl-[40px] rounded-br-[40px]">
+          <div class="flex ml-16 mt-8">
+              <img class="w-[75px] h-[75px]" src="img/Mask group2.png" alt="">
+              <div class="ml-5 mt-3">
+                <p class="font-bold">Alex Walker</p>
+                <p> Attorney</p>
+              </div>
+          </div>
+          <p class="mx-16 mt-8">
+                Financial expertise has made a significant impact on our nonprofit financial
+                 stability, allowing us to better serve our community
+          </p>
+          <p class="text-[#008080] text-right text-[100px] mr-16">“</p>
+      </div>
+    </div>
+    <div>
+
+    </div>
+  </section>
+
+  <section id="Provides">
+    <p class="text-[40px] pr-[45%] mt-24 font-bold">Our Team Provides Valuable Services at Any Time in Any Situation</p>
+
+        <div class="grid grid-cols-3 mt-10 justify-between">
+          <div class="p-5">
+              <div><i class="fa-solid fa-graduation-cap bg-[#DAFAFC] text-[40px] rounded-full p-[30px]"></i></div>
+              <p class="font-bold text-[28px] mt-8 "> Expert Guidance</p>
+              <p class="text-[20px] mt-5"> Rely on seasoned professionals for tailored financial advice and strategic planning
+                 aligned with your unique goals</p>
+              
+              <div class="mt-10">
+                <a class="text-[#008080] font-bold" href="#"> read more</a>
+              </div>
+
+          </div>
+          
+          <div class="p-5">
+              <div><i class="fa-solid fa-shield-halved bg-[#FDE4E4] text-[40px] rounded-full p-[30px]"></i></div>
+              <p class="font-bold text-[28px] mt-8 "> Risk Management</p>
+              <p class="text-[20px] mt-5"> We expertly handle and proactively mitigate financial risks,
+                 ensuring the safeguard of assets and overall stability</p>
+              
+              <div class="mt-10">
+                <a class="text-[#008080] font-bold" href="#"> read more</a>
+              </div>
+
+          </div>
+
+          <div class="p-5">
+              <div><i class="fa-solid fa-plus bg-[#DAFCDF] rounded-full text-[40px] p-[30px]"></i></div>
+              <p class="font-bold text-[28px] mt-8 "> Customized Solutions</p>
+              <p class="text-[20px] mt-5"> Receive and Benefit from with financial solutions that tailored
+                 to your unique financial challenges and aspirations</p>
+              
+              <div class="mt-10">
+                <a class="text-[#008080] font-bold" href="#"> read more</a>
+              </div>
+
+          </div>
+        </div>
+  </section>
+
+  <section id="">
+    <div class="mt-24 bg-[#008080] rounded-tl-[40px] rounded-br-[40px] h-[550px] flex">
+        <div >
+            <div class="flex items-center justify-center w-[200px] ml-16 mt-16">
+              <div class="text-[#008080] bg-[#DAFCDF] relative left-0 right-4 px-2">TESTIMONIALS</div>
+              <div class="bg-[#DAFCDF] w-[50px] h-[2px] ml-[20px]"></div>
+            </div>
+
+            <p class="text-[48px] pr-[40%] ml-16">
+              Get Start For Free No Credit Card Required 
+            </p>
+            <div class="flex ml-16 mt-12">
+                <input class="p-4 w-[350px]" type="text" placeholder="Email adresse">
+                <button class="bg-[#20CFC6] ml-2  p-4 w-[200px]"> Get Started</button>
+            </div>
+            <p class="mt-9 ml-14 text-white"> Want to contact our team and book a call? <a class="font-bold text-[#20CFC6]" href="#"> Try it now</a></p>
+        </div>
+        <div class="flex items-center justify-center">
+            <img class="mt-12 mr-28" src="img/Imagestof.png" alt="">
+        </div>
+    </div>
+
+  </section>
+
+    </div>
+    <Section id="footer" >
+    <div class="mt-24 bg-[#008080] h-[500px]">
+          <div class="grid grid-cols-5 text-white justify-between pl-[100px] pt-[70px]">
+              <div class=" col-span-2 mr-32">
+
+                  <p class="text-[40px] font-bold my-4">prosperix</p>
+                  <p class="my-8">Our expert financial consultants provide
+                   solutions to help you achieve financial wealth. Trust us to guide
+                    you toward a brighter financial futu</p>
+
+                   <div class=" grid grid-cols-3 justify-between my-8">
+                      <div><i class="fa-brands fa-facebook-f"></i>  Facebook</div>
+                      <div><i class="fa-brands fa-twitter"></i>  Twitter</div>
+                      <div><i class="fa-brands fa-instagram"></i> Instagram</div>
+                   </div>
+              </div>
+
+              <div class=" col-span-1">
+                  <p class="text-[26px] font-bold">OUR SERVICES</p>
+
+                  <p class="my-7">Insurance planning</p>
+                  <p class="my-7"> Extate planning</p>
+                  <p class="my-7"> Tax Optimisation</p>
+                  <p class="my-7"> Debt Managment</p>
+
+              </div>
+
+              <div class=" col-span-1">
+                  <p class="text-[26px] font-bold">EXPLORE MORE</p>
+
+                  <p class="my-7">About Us</p>
+                  <p class="my-7"> blog</p>
+                  <p class="my-7"> Site Map</p>
+                  <p class="my-7"> Privacy</p>
+              </div>
+
+              <div class=" col-span-1">
+                  <p class="text-[26px] font-bold">Contact Details</p>
+                  <p class="my-7">Kokitcho@gmail.com</p>
+                  <p class="my-7"> +229 96321870</p>
+              </div>
+
+          </div>
+          <div class="ml-[100px] mt-16 h-[2px] bg-white w-[87%]"></div>
+          <div class="flex w-[100%] justify-between mt-4 text-white" >
+            <p class="text-left ml-[100px]">DSCODE 2023 @ All right reserved</p>
+            <p class="text-right mr-[100px]"> Terms & Conditions privacy policy</p>
+          </div>
+    </div>
+  </Section>
+    
+    <script>
+    // Bar chart
+    const ctxBar = document.getElementById('barChart');
+    new Chart(ctxBar, {
+      type: 'bar',
+      data: {
+        labels: ['100', '200', '300', '400'],
+        datasets: [{
+          label: 'Investments',
+          data: [100, 200, 300, 400],
+          backgroundColor: [
+            '#facc15', // jaune
+            '#f87171', // rouge
+            '#34d399', // vert
+            '#22d3ee'  // cyan
+          ],
+          borderRadius: 4,
+          barThickness: 40,
+        }]
+      },
+      options: {
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { grid: { display: false } },
+          y: { grid: { display: false }, ticks: { display: false } }
+        }
+      }
+    });
+
+    // Line chart
+    const ctxLine = document.getElementById('lineChart');
+    new Chart(ctxLine, {
+      type: 'line',
+      data: {
+        labels: [10,20,30,40,50,60,70],
+        datasets: [{
+          label: 'Growth',
+          data: [10,24.08,18,30,48.09,40,55],
+          borderColor: '#06b6d4',
+          backgroundColor: 'rgba(6, 182, 212, 0.1)',
+          fill: true,
+          tension: 0.2,
+          pointBackgroundColor: ['#f87171','#06b6d4'],
+          pointRadius: [5,5,0,0,5,0,0]
+        }]
+      },
+      options: {
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { grid: { display: false } },
+          y: { grid: { display: false } }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
